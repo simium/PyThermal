@@ -1,21 +1,21 @@
 #!/usr/bin/python
 
 fov = dict(
-    horizontal = 128,
-    vertical   = 80,
+    horizontal=128,
+    vertical=80,
 )
 
 temperature = dict(
-    tmax = 100,
-    tmin = 1,
+    tmax=100,
+    tmin=1,
 )
 
 files = dict(
-    csv = './scanned_temperatures.csv',
+    csv='./scanned_temperatures.csv',
 )
 
 options = dict(
-    bw = False,
+    bw=False,
 )
 
 temperatures = [[0, 0, 0],
@@ -97,6 +97,6 @@ temperatures = [[0, 0, 0],
                 [255,  0, 48],
                 [255,  0, 64]]
 
+
 def temperature_map(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-
